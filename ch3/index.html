@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--Gana Sehaki 03/30/2025-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>permission js</title>
+</head>
+<body>
+    <h1>JavaScript test</h1>
+
+    <script>
+        //username declaration
+        let username;
+
+        //answer assigned to the variable
+        username = prompt("What is your name ?");
+
+        //proceed declaration
+        let proceed;
+
+        //answer assigned to the variable
+        proceed = confirm(`Do want to use uour name : ${username} in the web page`);
+
+        //traditional if statement
+        if (proceed){
+            //output if answer is YES
+            console.log("I can use your name " + username + " in the web page...");
+        } else {
+            //output if answer is NO
+            console.log("No, you can not use my name is this web page, PRIVACY Please...");
+        }
+
+        //age declaration
+        let age;
+
+        //store the answer in the variable
+        age = prompt("How old are you ?");
+
+        //alert the age
+        alert(`Hi ${username}, you are ${age} years old...`);
+    </script>
+</body>
+</html>

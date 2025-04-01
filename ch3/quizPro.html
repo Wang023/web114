@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--Gana Sehaki 03/30/2025-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript test</h1>
+
+    <script>
+        //script test
+        console.log("script running...");
+
+        //user answer
+        answer = prompt("What is the capital of Algeria ?");
+
+        //answer conversion
+        answer = answer.toLowerCase();
+
+        //user answer
+        answer1 = prompt("What is the capital of France ?");
+
+        //answer conversion
+        answer1 = answer1.toLowerCase();
+
+        //user answer
+        answer2 = prompt("What is the capital of Italy ?");
+
+        //answer conversion
+        answer2 = answer2.toLowerCase();
+
+        //counter declaration
+        let counter = 0;
+
+        //testing the answer
+        if (answer === "algiers"){
+            console.log("Your answer is correct...");
+            counter++;
+        } else {
+            console.log("Wrong answer, teh capital of Algeria is Algiers...");
+        }
+
+        if (answer1 === "paris"){
+            console.log("Your answer is correct...");
+            counter++;
+        } else {
+            console.log("Wrong answer, teh capital of France is Paris...");
+        }
+
+        if (answer2 === "roma"){
+            console.log("Your answer is correct...");
+            counter++;
+        } else {
+            console.log("Wrong answer, teh capital of Italy is Roma...");
+        }
+
+        //alert number of correct answers
+        alert(`You got ${parseInt(counter)} of 3`);
+
+
+    </script>
+    
+</body>
+</html>
