@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--Gana Sehaki 04/08/2025-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js testing</title>
+</head>
+<body>
+    <h1>javascript test...</h1>
+    
+    <script>
+        //to make sure the script is running
+        console.log("script running...");
+        
+        //store the favDay variable
+        const favDay = prompt("What is your favourite day in the week ?");
+        //switch conversion 
+        switch (favDay.toLocaleLowerCase()){
+            //switch comparisions...
+            case('monday'):
+                console.log(" Monday! Here we go again for a new week.");
+                break;
+            case 'tuesday':
+                console.log("Tuesday! You're getting into the groove.");
+                break;
+            case 'wednesday':
+                console.log("Wednesday, the midweek hero!");
+                break;
+            case 'thursday':
+                console.log("Thursday, almost there!");
+                break;
+            case 'friday':
+                console.log("Yaay Friday! The weekend is calling!");
+                break;
+            case 'saturday':
+                console.log("Saturday, time to relax and enjoy.");
+                break;
+            case 'sunday':
+                console.log("Sunday, rest well and see you next week.");
+                break;
+            default :
+                console.log("Ooops, that doesn't seem like a day of the week.");
+        }
+    </script>
+</body>
+</html>
