@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--Gana Sehaki-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    
+    <script>
+        //script running
+        console.log("script running...");
+
+        //initialize variables
+        let keepAdding = true;
+        let itemName;
+        let itemPrice;
+        let total = 0;
+
+        //do-while lopp
+        do{
+            //ask the user for item name
+            itemName = prompt("Tap the item name or done to finish :");
+
+            //check user's answer
+            if(itemName.toLowerCase() !== 'done'){
+                //ask the user for item price
+                itemPrice = parseFloat(prompt("Tap the price :"));
+
+                //calculate total
+                total += itemPrice;
+                
+                //with the line of code below we can avoid the if statement
+                //keepAdding = confirm("Do you want to add items ?");
+            } else {
+                keepAdding = false;
+            }
+        }
+        while(keepAdding);
+
+        //check for dicount
+        if(total > 100){
+            //calculate the discount and displays it
+            let discount = (total * 0.20);
+            console.log(`You received a discount of $${discount.toFixed(2)}`);
+
+            //calculate the new total
+            total -= discount;
+        }
+
+        //display total
+        console.log(`Your Total is : $${total.toFixed(2)}`);
+    </script>
+</body>
+</html>
