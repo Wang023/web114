@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--Gana Sehaki-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript testing</title>
+</head>
+<body>
+    <h1>JavaScript Testing</h1>
+    
+    <script>
+        console.log("script running...");
+        // ask the user to enter his name
+        let name = prompt("Enter your name : ");
+        // ask the user to enter his weekly gas and -1 to end
+        let weeklyGas = parseFloat(prompt("Enter your weekly gas total : (enter -1 to end)"));
+
+        function calcGasAvg(){
+            let count = 0;
+            let total = 0;
+
+            while(weeklyGas !== -1){
+                total += weeklyGas;
+                count++;
+                // ask the user to enter his weekly gas and -1 to end
+                weeklyGas = parseFloat(prompt("Enter your weekly gas total : (enter -1 to end)"));
+            }
+
+                // condition to avoid division by zero
+                if(count === 0){
+                    return 0;
+                } else {
+                    return (total / count);
+                }
+            }
+            let gas = calcGasAvg();
+
+            alert(name + "'s average weekly gas bill is " + gas.toFixed(2));
+        
+
+    </script>
+</body>
+</html>
