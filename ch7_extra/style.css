@@ -10,6 +10,7 @@
 #message-input {
     width: 20%;
     padding: 10px;
+    background: rgb(246, 246, 231);
 }
 
 #send-button, #clear-button {
