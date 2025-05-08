@@ -1,0 +1,175 @@
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+  text-align: center;
+  padding: 20px;
+  background-color: #93a5d5;
+}
+
+#start-screen-btn{
+  position: relative;
+  top: 15em;
+}
+
+#start-game-relax{
+  background-color: #2650c5;
+  color: #f5f5f5;
+  margin-bottom: 15px;
+}
+
+#start-game-relax:hover{
+  background-color: #0b3fcf;
+}
+
+#start-game-challenge{
+  background-color: #ca2d2d;
+  color: #f5f5f5;
+}
+
+#start-game-challenge:hover{
+  background-color: #ca1515;
+}
+
+#quit-btn{
+  padding: 5px 8px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #ccc;
+  float: right;
+}
+
+#quit-btn:hover{
+  background-color: #ca1515;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  cursor: pointer;
+}
+
+#levelTimerScore{
+  display: flex;
+  gap: 5px;
+}
+
+#game{
+  max-width: 400px;
+  margin: -1.5rem auto;
+  padding: 10px;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+  box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  background-color: #9aaadd;
+}
+
+#timer, #score, #yourLevel{
+  padding: 12px;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}
+
+#images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 3rem;
+}
+
+.img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+#input-area {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+button{
+  border: none;
+}
+
+#answer {
+  padding: 10px;
+  font-size: 16px;
+  width: 60%;
+  text-align: center;
+}
+input:focus{
+  outline : none;
+}
+
+#check, #reset {
+  margin-top: 10px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#check{
+  color: #000;
+  background-color: #7ed321;
+}
+
+#check:hover{
+  background-color: #70cf0b;
+}
+
+#reset{
+  background-color: #ba3444;
+}
+
+#reset:hover{
+  background-color: #d0021b;
+}
+#reset img{
+  width: 30px;
+  height: 30px;
+}
+
+/* letters styles */
+
+#letters-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.letter-btn {
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #fff;
+  color: #56615a;
+  border: 1px solid #56615a;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.letter-btn:hover {
+  background: #ddd;
+}
+
+#feedback {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
