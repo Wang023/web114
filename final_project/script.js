@@ -162,7 +162,8 @@ const levels = [
         setTimeout(loadLevel, 500); //0.5s to load new level
       } else {
         //feedback.textContent = "You're a genius ! See you in the next session...";
-        alert('You are a genius ! See you in the next session...')
+    triggerFinalCelebration();
+  alert('🎈🏆🎉 You are a genius ! See you in the next session... 🎊🥳🌟');
         clearInterval(timerInterval);
         location.reload();
       }
@@ -243,6 +244,25 @@ function triggerSadEmoji() {
     setTimeout(() => {
       emoji.remove();
       if (i === 19) container.style.display = "none";
+    }, 3000);
+  }
+}
+function triggerFinalCelebration() {
+  const container = document.getElementById("emoji-celebration");
+  container.style.display = "block";
+  const celebrationEmojis = ["🎈", "🏆", "🎉", "🥳", "🎊", "🌟"];
+
+  for (let i = 0; i < 30; i++) {
+    const emoji = document.createElement("div");
+    emoji.textContent = celebrationEmojis[Math.floor(Math.random() * celebrationEmojis.length)];
+    emoji.classList.add("emoji");
+    emoji.style.left = Math.random() * 100 + "vw";
+    emoji.style.top = Math.random() * 100 + "vh";
+    container.appendChild(emoji);
+
+    setTimeout(() => {
+      emoji.remove();
+      if (i === 29) container.style.display = "none";
     }, 3000);
   }
 }
