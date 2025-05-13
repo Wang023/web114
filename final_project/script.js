@@ -50,7 +50,7 @@ const levels = [
   const scoreDisplay = document.getElementById("score");
   const yourLevelDisplay = document.getElementById("yourLevel");
   const inputField = document.getElementById("answer");
-  // const feedback = document.getElementById("feedback");
+  const feedback = document.getElementById("feedback");
   const lettersContainer = document.getElementById("letters-container");
   
   function shuffle(array) {
@@ -118,7 +118,7 @@ const levels = [
     });
   
     inputField.value = "";
-    // feedback.textContent = "";
+    feedback.textContent = "";
     lettersContainer.textContent = "";
   
     const letters = generateLetters(level.answer, currentLevel);
@@ -149,7 +149,7 @@ const levels = [
     const correctAnswer = levels[currentLevel].answer.toLowerCase();
   
     if (userAnswer === correctAnswer) {
-      //feedback.textContent = "Congratulations !!!";
+        feedback.textContent = "Congratulations !!!";
         triggerEmojiCelebration();
 
       
@@ -161,15 +161,13 @@ const levels = [
       if (currentLevel < levels.length) {
         setTimeout(loadLevel, 500); //0.5s to load new level
       } else {
-        //feedback.textContent = "You're a genius ! See you in the next session...";
-    
-  alert('🎈🏆🎉 You are a genius ! See you in the next session... 🎊🥳🌟');
-          triggerFinalCelebration();
+     feedback.textContent = "🎈🏆🎉 You are a genius ! See you in the next session... 🎊🥳🌟";
+        triggerFinalCelebration();
         clearInterval(timerInterval);
         location.reload();
       }
     } else {
-      //feedback.textContent = "Oops! wrong answer...";
+     feedback.textContent = "Oops! wrong answer...";
      triggerSadEmoji();
       
 
