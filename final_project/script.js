@@ -142,84 +142,39 @@ const levels = [
     }
   }
   
-// // answer check
+// answer check
 
-//   document.getElementById("check").addEventListener("click", () => {
-//     const userAnswer = inputField.value.trim().toLowerCase();
-//     const correctAnswer = levels[currentLevel].answer.toLowerCase();
+  document.getElementById("check").addEventListener("click", () => {
+    const userAnswer = inputField.value.trim().toLowerCase();
+    const correctAnswer = levels[currentLevel].answer.toLowerCase();
   
-//     if (userAnswer === correctAnswer) {
-//       //feedback.textContent = "Congratulations !!!";
-//       alert('Congratulations !!!')
-//       currentLevel++;
-//       score++;
-//       yourLevel++;
-//       scoreDisplay.textContent = `Score: ${score*10}%`;
-//       yourLevelDisplay.textContent = `Level: ${yourLevel}`;
-//       if (currentLevel < levels.length) {
-//         setTimeout(loadLevel, 500); //0.5s to load new level
-//       } else {
-//         //feedback.textContent = "You're a genius ! See you in the next session...";
-//         alert('You are a genius ! See you in the next session...')
-//         clearInterval(timerInterval);
-//         location.reload();
-//       }
-//     } else {
-//       //feedback.textContent = "Oops! wrong answer...";
-//       alert('Oops! wrong answer...');
-//       inputField.value = ""; //clear the input after a wrong answer
-//       // make all the buttons able automatically after a wrong answer
-//       document.querySelectorAll(".letter-btn").forEach(btn => {
-//       btn.disabled = false;
-//       btn.style.color = "#56615a"; 
-//     }); 
-//     }
-//   });
-const emojiContainer = document.getElementById("emoji-container");
-
-function showEmojis(emojis) {
-  emojiContainer.innerHTML = ''; // Vide les anciens emojis
-  for (let i = 0; i < 10; i++) {
-    const emoji = document.createElement("span");
-    emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-    emoji.classList.add("emoji");
-    emoji.style.left = Math.random() * 90 + "%";
-    emojiContainer.appendChild(emoji);
-  }
-}
-
-document.getElementById("check").addEventListener("click", () => {
-  const userAnswer = inputField.value.trim().toLowerCase();
-  const correctAnswer = levels[currentLevel].answer.toLowerCase();
-
-  if (userAnswer === correctAnswer) {
-    showEmojis(["🎉", "😄", "✨", "👍", "👏"]);
-    currentLevel++;
-    score++;
-    yourLevel++;
-    scoreDisplay.textContent = `Score: ${score * 10}%`;
-    yourLevelDisplay.textContent = `Level: ${yourLevel}`;
-    
-    setTimeout(() => {
-      emojiContainer.innerHTML = "";
+    if (userAnswer === correctAnswer) {
+      //feedback.textContent = "Congratulations !!!";
+      alert('Congratulations !!!')
+      currentLevel++;
+      score++;
+      yourLevel++;
+      scoreDisplay.textContent = `Score: ${score*10}%`;
+      yourLevelDisplay.textContent = `Level: ${yourLevel}`;
       if (currentLevel < levels.length) {
-        loadLevel();
+        setTimeout(loadLevel, 500); //0.5s to load new level
       } else {
-        showEmojis(["🏆", "🎓", "🤯", "👑", "🎊"]);
+        //feedback.textContent = "You're a genius ! See you in the next session...";
+        alert('You are a genius ! See you in the next session...')
         clearInterval(timerInterval);
-        setTimeout(() => location.reload(), 3000);
+        location.reload();
       }
-    }, 1000);
-
-  } else {
-    showEmojis(["😢", "💔", "🙁", "❌", "😭"]);
-    inputField.value = "";
-    document.querySelectorAll(".letter-btn").forEach(btn => {
+    } else {
+      //feedback.textContent = "Oops! wrong answer...";
+      alert('Oops! wrong answer...');
+      inputField.value = ""; //clear the input after a wrong answer
+      // make all the buttons able automatically after a wrong answer
+      document.querySelectorAll(".letter-btn").forEach(btn => {
       btn.disabled = false;
-      btn.style.color = "#56615a";
-    });
-  }
-});
+      btn.style.color = "#56615a"; 
+    }); 
+    }
+  });
 
   
   document.getElementById("reset").addEventListener("click", () => {
