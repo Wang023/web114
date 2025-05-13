@@ -168,7 +168,7 @@ const levels = [
       }
     } else {
       //feedback.textContent = "Oops! wrong answer...";
-      alert('Oops! wrong answer...');
+     triggerSadEmoji();
       
 
       inputField.value = ""; //clear the input after a wrong answer
@@ -225,3 +225,25 @@ function triggerEmojiCelebration() {
     }, 3000);
   }
 }
+
+
+function triggerSadEmoji() {
+  const container = document.getElementById("emoji-celebration");
+  container.style.display = "block";
+  const sadEmojis = ["😢", "😞", "😭", "🙁", "😔", "😟"];
+
+  for (let i = 0; i < 20; i++) {
+    const emoji = document.createElement("div");
+    emoji.textContent = sadEmojis[Math.floor(Math.random() * sadEmojis.length)];
+    emoji.classList.add("emoji");
+    emoji.style.left = Math.random() * 100 + "vw";
+    emoji.style.top = Math.random() * 100 + "vh";
+    container.appendChild(emoji);
+
+    setTimeout(() => {
+      emoji.remove();
+      if (i === 19) container.style.display = "none";
+    }, 3000);
+  }
+}
+
