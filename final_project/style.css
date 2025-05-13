@@ -172,29 +172,3 @@ input:focus{
   font-weight: bold;
   font-size: 18px;
 }
-.emoji-container {
-  position: relative;
-  height: 100px;
-  overflow: hidden;
-  margin-top: 20px;
-}
-
-.emoji {
-  position: absolute;
-  font-size: 2rem;
-  animation: floatUp 2s ease-out forwards;
-  opacity: 0;
-}
-
-@keyframes floatUp {
-  0% {
-    bottom: 0;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    bottom: 100px;
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-}
