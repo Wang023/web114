@@ -202,3 +202,27 @@ const levels = [
     document.getElementById("quit-btn").style.display = "inline-block"
   }
 
+function showEmojiAnimation(success = true) {
+  const container = document.getElementById("emoji-container");
+  const emojis = success ? ["🎉", "👏", "🤩", "🌟", "🎊"] : ["😢", "💔", "😭", "😞", "😓"];
+  container.innerHTML = "";
+
+  for (let i = 0; i < 30; i++) {
+    const emoji = document.createElement("span");
+    emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    emoji.style.position = "absolute";
+    emoji.style.left = Math.random() * 100 + "vw";
+    emoji.style.top = Math.random() * 100 + "vh";
+    emoji.style.opacity = Math.random();
+    emoji.style.animation = "float 2s ease-in-out";
+    container.appendChild(emoji);
+  }
+
+  container.style.display = "block";
+
+  setTimeout(() => {
+    container.innerHTML = "";
+    container.style.display = "none";
+  }, 2000);
+}
+
