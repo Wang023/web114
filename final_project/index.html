@@ -46,30 +46,9 @@
       <!-- <p id="feedback"></p> -->
     </div>
   </div>
-   <button onclick="triggerEmojiCelebration()">Test 🎉</button>
   <div id="emoji-celebration" style="display: none;"></div>
 
-  <script>
-    function triggerEmojiCelebration() {
-      const container = document.getElementById("emoji-celebration");
-      container.style.display = "block";
-      const emojis = ["🎉", "✨", "😁", "🎊", "🥳", "🌟", "😄", "👏"];
-
-      for (let i = 0; i < 30; i++) {
-        const emoji = document.createElement("div");
-        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
-        emoji.classList.add("emoji");
-        emoji.style.left = Math.random() * 100 + "vw";
-        emoji.style.top = Math.random() * 100 + "vh";
-        container.appendChild(emoji);
-
-        setTimeout(() => {
-          emoji.remove();
-          if (i === 29) container.style.display = "none";
-        }, 3000);
-      }
-    }
-  </script>
+  
 
 <script src="script.js"></script>
 </body>
