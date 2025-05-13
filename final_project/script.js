@@ -150,6 +150,8 @@ const levels = [
   
     if (userAnswer === correctAnswer) {
       //feedback.textContent = "Congratulations !!!";
+        triggerEmojiCelebration();
+
       alert('Congratulations !!!')
       
       currentLevel++;
@@ -205,3 +207,22 @@ const levels = [
     document.getElementById("quit-btn").style.display = "inline-block"
   }
 
+function triggerEmojiCelebration() {
+  const container = document.getElementById("emoji-celebration");
+  container.style.display = "block";
+  const emojis = ["🎉", "✨", "😁", "🎊", "🥳", "🌟", "😄", "👏"];
+  
+  for (let i = 0; i < 30; i++) {
+    const emoji = document.createElement("div");
+    emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    emoji.classList.add("emoji");
+    emoji.style.left = Math.random() * 100 + "vw";
+    emoji.style.top = Math.random() * 100 + "vh";
+    container.appendChild(emoji);
+
+    setTimeout(() => {
+      emoji.remove();
+      if (i === 29) container.style.display = "none";
+    }, 3000);
+  }
+}
