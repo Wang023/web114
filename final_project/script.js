@@ -167,7 +167,11 @@ const levels = [
         location.reload();
       }
     } else {
-     feedback.textContent = "Oops! wrong answer...";
+     feedback.textContent = "Oops! wrong answer...";   
+    // to make sure it disapper after a wrong answer
+    setTimeout(() => {
+      feedback.style.display = "none";
+    }, 5000); // 5 secondes
      triggerSadEmoji();
       
 
