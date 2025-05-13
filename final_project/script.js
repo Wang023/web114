@@ -167,12 +167,14 @@ const levels = [
         location.reload();
       }
     } else {
-     feedback.textContent = "Oops! wrong answer...";   
-    // to make sure it disapper after a wrong answer
-    setTimeout(() => {
-      feedback.style.display = "none";
-    }, 5000); // 5 secondes
-     triggerSadEmoji();
+     feedback.textContent = "Oops! wrong answer...";
+feedback.style.display = "block"; // s'assurer qu'on l'affiche d'abord
+
+setTimeout(() => {
+  feedback.style.display = "none";
+}, 2000); // 2 seconds
+
+triggerSadEmoji(); // appel de la fonction pour afficher l’emoji triste
       
 
       inputField.value = ""; //clear the input after a wrong answer
