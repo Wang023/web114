@@ -99,7 +99,7 @@ const levels = [
   
         if (timeLeft <= 0){
           clearInterval(timerInterval);
-          document.getElementById("check").disabled = "true";
+          document.getElementById("check").disabled = true;
           document.querySelectorAll(".letter-btn").forEach(btn => btn.disabled = true);
           alert("Time is left... try again!");
           location.reload(); //the user will restart the game if he's left of time
