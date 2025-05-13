@@ -152,7 +152,6 @@ const levels = [
       //feedback.textContent = "Congratulations !!!";
         triggerEmojiCelebration();
 
-      // alert('Congratulations !!!')
       
       currentLevel++;
       score++;
