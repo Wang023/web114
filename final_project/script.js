@@ -150,7 +150,9 @@ const levels = [
   
     if (userAnswer === correctAnswer) {
       //feedback.textContent = "Congratulations !!!";
-      alert('Congratulations !!!')
+      // alert('Congratulations !!!')
+        showEmojiAnimation(true);
+
       currentLevel++;
       score++;
       yourLevel++;
@@ -166,7 +168,9 @@ const levels = [
       }
     } else {
       //feedback.textContent = "Oops! wrong answer...";
-      alert('Oops! wrong answer...');
+      // alert('Oops! wrong answer...');
+        showEmojiAnimation(false);
+
       inputField.value = ""; //clear the input after a wrong answer
       // make all the buttons able automatically after a wrong answer
       document.querySelectorAll(".letter-btn").forEach(btn => {
