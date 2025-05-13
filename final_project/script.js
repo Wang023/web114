@@ -162,8 +162,9 @@ const levels = [
         setTimeout(loadLevel, 500); //0.5s to load new level
       } else {
         //feedback.textContent = "You're a genius ! See you in the next session...";
-    triggerFinalCelebration();
+    
   alert('🎈🏆🎉 You are a genius ! See you in the next session... 🎊🥳🌟');
+          triggerFinalCelebration();
         clearInterval(timerInterval);
         location.reload();
       }
